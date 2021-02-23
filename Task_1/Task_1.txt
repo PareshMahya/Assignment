@@ -1,0 +1,72 @@
+#1. Create three variables in a single line and assign values to them in such a manner that each one of them belongs to a different data type.
+    a,b,c = 1, 2.01, "Paresh"
+    print(a ," is ",type(a))
+    print(b ," is ",type(b))
+    print(c ," is ",type(c))
+
+#2. Create a variable of type complex and swap it with another variable of type integer.
+    a = 1
+    d = 1+2j
+    print ("the values of 'a' and 'd' are ", a, " and", d), type(a), type(d)
+    a, d = d, a
+    print ("after swapping the values of 'a' and 'd' new values are ", a, " and", d), type(a), type(d)
+
+
+#3. Swap two numbers using a third variable and do the same task without using any third variable.
+
+  Swap two numbers using a third
+    e = 5
+    f = 10
+    print(“your first nubmer e is”, e)
+    print(“your second nubmer f is”, f)
+    temp_e = e
+    e = f
+    f = temp_e
+    print ("now your new first nubmer e is ", e)
+    print ("now your new second nubmer f is ", f)
+
+  Swap two numbers without using any third variable.
+    g =10
+    h = 20
+    print(“your first nubmer g is “, g)
+    print(“your second nubmer h is”, h)
+    g, h = h,g
+    print ("now your new first nubmer g is ", g)
+    print ("now your new second nubmer h is ", h)
+
+#4. Write a program that takes input from the user and prints it using both Python 2.x and Python 3.x Version.
+
+  For Python 2.x
+    m= eval(raw_input("enter your input:")
+    print(m)
+
+  For Python 3.x
+    n= eval(input("enter your input: "))
+    print(n)
+
+#5. Write a program to complete the task given below:
+Ask users to enter any 2 numbers in between 1-10 , add the two numbers and keep the sum in another variable called z. Add 30 to z and store the output in variable result and print result as the
+final output.
+
+    x =eval(input("Enter first numbers in between 1-10:" ))
+    y =eval(input("Enter second numbers in between 1-10:" ))
+    z = x+y
+    w = 30+z
+    print("The final output is ", w)
+
+#6. Write a program to check the data type of the entered values.
+HINT: Printed output should say - The data type of the input value is : int/float/string/etc
+
+    q6 = eval(input("Enter something :"))
+    print ("The data type of the input value is : ", type(q6))
+
+
+#7. Create Variables using formats such as Upper CamelCase, Lower CamelCase, SnakeCase and UPPERCASE. (Refer: https://capitalizemytitle.com/camel-case/)
+    TotalSum = 10
+    totalSum = 20
+    total_sum = 30
+    TOTALSUM= 40
+
+#8. If one data type value is assigned to ‘a’ variable and then a different data type value is assigned to ‘a’ again. Will it change the value? If Yes then Why?
+
+    In python, any data type can be assign variables by equal(=) sign. The data type declaration happens automatically when you assign a value to a variable and we can change variable with any data type by specific way such as Strings in the quotation marks(" "), list in square brackets([ ]), tuples are enclosed within parentheses, and so on.
