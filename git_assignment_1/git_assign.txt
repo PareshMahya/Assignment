@@ -1,0 +1,149 @@
+# Exercise 1: Create your first Commit.
+Task:
+  Initialize your Repository: git init project Exercise-1
+  % git init
+  Create a file with name index.html
+  % touch index.html
+  % echo abcde > index.html             #--------------- this command use when try to create file with some code, here we are using code as "abcde."---------
+  Write code in newly created file
+  % vi index.html
+  #--------or-------
+  % vim index.html
+  Stage index.html
+  % git add index.html
+  Commit with message ‘Initial Message.’
+  % git commit -m "This is the first exercise"
+
+# Exercise 2: Commit only one file.
+Task:
+  Initialize your Repository: git init Exercise-2
+  % mkdir Exercise-2 
+  % git init Exercise-2 
+  Create a files with names index.html and about.html   
+  % touch index.html about.html
+  Add code in both files.
+  % vi index.html
+  % vi about.html
+  Stage only one file.
+  % git add index.html 
+  Commit with message:  ‘File x added.’ 
+  % git commit -m "File x added."
+
+# Exercise 3: Modify last commit.
+Task:
+  Initialize your Repository: git init project Exercise-3
+  % mkdir Exercise-3 
+  % git init Exercise-3
+  Create a file with name index.html
+  % touch index.html
+  Write code in newly created file
+  % vi index.html
+  Stage index.html
+  % git add index.html
+  Commit with message ‘adding index.html.’   
+  % git commit -m "adding index.html."
+  Add new about.html file with some code.
+  % echo "hi,this is demo"> about.html
+  Now modify message of previous commit as ‘Adding index.html and about.html ’and add about.html file in previous commit.
+  % git add about.html
+  % git commit --amend -m "Adding index.html and about.html" 
+
+# Exercise 4: Create git ignore file
+Task:
+  Initialize your Repository: git init Exercise-4
+  % mkdir Exercise-4
+  % git init Exercise-4
+Create a git ignore file that will ignore 
+% touch .gitignore   
+    all files with ‘exe’ extension   
+    % *.exe
+    all files with ‘o’ extension   
+    % *.o
+    all files with ‘jar’ extension   
+    % *.jar
+    the whole libraries directory 
+    % /libraries_directory
+
+# Exercise 5: Save your work with stash.
+ Task:
+  Initialize your Repository: git init Exercise-5
+  %
+  Add some random files with code
+  %
+  Now use git stash command to save required files from above files.
+  %
+(For this exercise don’t send repository just submit git commands and output of git stash list)
+
+
+# Exercise 6: Reset Previous Commit Keeping changes. (Soft Reset) Task:
+  Initialize your Repository: git init Exercise-6.
+  %
+  Do some series of commits.
+  %
+  Now use git reset command to reset one of the commit and keep changes in staging area.
+  %
+In answer also add output of git  status command. 
+  %
+
+# Exercise 6: Reset Previous Commit Keeping changes. (Soft Reset) Task:
+  %
+  Initialize your Repository: git init Exercise-6.
+  %
+  Do some series of commits.
+  %
+  Now use git reset command to reset one of the commit and keep changes in staging area.
+  %
+In answer also add output of git  status command.
+  %
+
+# Exercise 7: Reset Previous Commit (Hard Reset).
+Task:
+  Initialize your Repository: git init Exercise-7.
+  %
+  Do some series of commits.
+  %
+  Use git reset command to reset one of the commit without keeping changes.
+  %
+
+# Exercise 8: Merge branch (No Conflicts).
+Task:
+  Initialize your Repository: git init Exercise-8   
+  %
+  Create index.html file add some code.
+  %
+  Make Commit.
+  %
+  Create new branch from master branch with name my-feature.   
+  %
+  Add about-us.html file with code and commit changes in my-feature branch.
+  %
+  Now checkout master branch.
+  %
+  Merge my-feature branch into master.
+  %
+
+# Exercise 9: Merge branch (Conflicts).
+Task:
+  Initialize your Repository: git init Exercise-9   
+  %
+  Create index.html file add some code.
+  %
+  Make Commit.
+  %
+  Create new branch from master branch with name my-feature.
+  %
+  Add about-us.html file with code
+  %
+  Make changes in index.html
+  %
+  Commit changes in my-feature branch.
+  %
+  Now checkout master branch.   
+  %
+  Do some code changes in index.html   
+  %
+  Commit changes.
+  %
+  Now merge my-feature branch into master.
+  %
+  You will get conflicts for index.html file. Resolve conflict by selecting both changes for the same index.html file.
