@@ -1,10 +1,12 @@
 # Exercise 1: Create your first Commit.
 Task:
   Initialize your Repository: git init project Exercise-1
+  % mkdir Exercise-1 
+  % cd Exercise-1
   % git init
   Create a file with name index.html
   % touch index.html
-  % echo abcde > index.html             #--------------- this command use when try to create file with some code, here we are using code as "abcde."---------
+  % echo abcde > index.html    #------- this command use when try to create file with some code, here we are using code as "abcde."-------
   Write code in newly created file
   % vi index.html
   #--------or-------
@@ -18,7 +20,8 @@ Task:
 Task:
   Initialize your Repository: git init Exercise-2
   % mkdir Exercise-2 
-  % git init Exercise-2 
+  % cd Exercise-2 
+  % git init 
   Create a files with names index.html and about.html   
   % touch index.html about.html
   Add code in both files.
@@ -33,7 +36,8 @@ Task:
 Task:
   Initialize your Repository: git init project Exercise-3
   % mkdir Exercise-3 
-  % git init Exercise-3
+  % cd Exercise-3  
+  % git init
   Create a file with name index.html
   % touch index.html
   Write code in newly created file
@@ -52,7 +56,8 @@ Task:
 Task:
   Initialize your Repository: git init Exercise-4
   % mkdir Exercise-4
-  % git init Exercise-4
+  % cd  Exercise-4 
+  % git init
 Create a git ignore file that will ignore 
 % touch .gitignore   
     all files with ‘exe’ extension   
@@ -67,83 +72,110 @@ Create a git ignore file that will ignore
 # Exercise 5: Save your work with stash.
  Task:
   Initialize your Repository: git init Exercise-5
-  %
+    % mkdir Exercise-5
+    % cd  Exercise-5
+    % git init
   Add some random files with code
-  %
+  % echo print("Hello, World!")>hello_world.py
+  % echo print("Hello, Hello!")>file2.py
   Now use git stash command to save required files from above files.
-  %
+  % git stash -u 
 (For this exercise don’t send repository just submit git commands and output of git stash list)
 
 
-# Exercise 6: Reset Previous Commit Keeping changes. (Soft Reset) Task:
+# Exercise 6: Reset Previous Commit Keeping changes. (Soft Reset) 
+Task:
   Initialize your Repository: git init Exercise-6.
-  %
+    % mkdir Exercise-6
+    % cd  Exercise-6
+    % git init  
   Do some series of commits.
-  %
+  % echo "hello" > index.html
+  % git add index.html
+  % git commit -m "adding index.html"
+  % echo "hello" > index.html
+  % git add index.html
+  % git commit -m "adding index.html"
+  % echo "hello" > index.html
+  % git add index.html
+  % git commit -m "adding index.html"
   Now use git reset command to reset one of the commit and keep changes in staging area.
-  %
+  % git reset --soft HEAD^
 In answer also add output of git  status command. 
-  %
+  % git status
 
-# Exercise 6: Reset Previous Commit Keeping changes. (Soft Reset) Task:
-  %
-  Initialize your Repository: git init Exercise-6.
-  %
-  Do some series of commits.
-  %
-  Now use git reset command to reset one of the commit and keep changes in staging area.
-  %
-In answer also add output of git  status command.
-  %
 
 # Exercise 7: Reset Previous Commit (Hard Reset).
 Task:
   Initialize your Repository: git init Exercise-7.
-  %
+  % mkdir Exercise-7
+  % cd  Exercise-7
+  % git init
   Do some series of commits.
-  %
+  % echo "hello" > index.html
+  % git add index.html
+  % git commit -m "adding index.html"
+  % echo "hello" > index.html
+  % git add index.html
+  % git commit -m "adding index.html"
+  % echo "hello" > index.html
+  % git add index.html
+  % git commit -m "adding index.html"
   Use git reset command to reset one of the commit without keeping changes.
-  %
+  % git reset --soft HEAD^
 
 # Exercise 8: Merge branch (No Conflicts).
 Task:
   Initialize your Repository: git init Exercise-8   
-  %
+  % mkdir Exercise-8
+  % cd  Exercise-8
+  % git init
   Create index.html file add some code.
-  %
+  % echo "hello" > index.html
   Make Commit.
-  %
+  % git add . 
+  % git commit -m "add index.html file"
   Create new branch from master branch with name my-feature.   
-  %
+  % git checkout -b my-feature
   Add about-us.html file with code and commit changes in my-feature branch.
-  %
+  % echo "hi" > about-us.html
+  % git add .
+  % git commit -m "add about-us.html file"
   Now checkout master branch.
-  %
+  % git checkout master
   Merge my-feature branch into master.
-  %
+  % git merge my-feature
 
 # Exercise 9: Merge branch (Conflicts).
 Task:
   Initialize your Repository: git init Exercise-9   
-  %
+  % mkdir Exercise-9
+  % cd  Exercise-9
+  % git init
   Create index.html file add some code.
-  %
+  % echo "hello" > index.html
   Make Commit.
-  %
+  %git add . 
+  %git commit -m "add index.html file"
   Create new branch from master branch with name my-feature.
-  %
+  %git checkout -b my-featur
   Add about-us.html file with code
-  %
+  % echo "hi" > about-us.html
   Make changes in index.html
-  %
+  % vi index.html
+  % cat index.html 
   Commit changes in my-feature branch.
-  %
+  % git add .
+  % git commit -m "add line"
   Now checkout master branch.   
-  %
+  % git checkout master
   Do some code changes in index.html   
-  %
+  % vi index.html
+  % cat index.html
   Commit changes.
-  %
+  % git add .
+  % git commit -m "add line"
   Now merge my-feature branch into master.
-  %
+  % git merge my-feature
   You will get conflicts for index.html file. Resolve conflict by selecting both changes for the same index.html file.
+  % git mergetool
