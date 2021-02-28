@@ -1,0 +1,103 @@
+# Task_3 Data Structure
+
+1.	Create a list of 10 elements of four different data types like int, string, complex and float.
+% list = [1,2,3,"four","five","six",7.0,8.9,1+2j,1+2j]
+% print ("Number of element in the list is :", len(list)," And Data Structure ",type(list))
+% print ("list = ", list)
+
+2.	Create a list of size 5 and execute the slicing structure 
+% list = [1,[1,2,3.0,4.5,5.6,7,8,9,0],"Hello, my friend Kevin","hseraP si sihT,iH",5+1j]
+% print("\nThis is the list-->", list,", \nlength of list is-->", len(list))
+% print("Picking an single element")
+% print("This is the print will show pick the first element from the list and that is -->", list[0], "\nAnd last element is -->", list[len(list)-1], "\nString Data in a list -->",list[2])
+% print("Slicing element from diffrent Data Structure")
+% print("\nThis is the print for pick element from a nested list. \nI am picking second element and inside that five element, excluding the first and last element with nornal(single) interval. \nAnd \nThat List is -->", list[1][1:len(list)])
+% print("\nThis print of picking a list with some abnormal intervals. \nHere I am picking the second element of the original list and inside that list picking every other element. \nThat list is-->",list[1][::2])
+% print("\nSlicing element inside string")
+% print(list[2])
+% print("Picking string with three interval is -->", list[2][::3])
+% print("This print is for picking String in reverse order -->",list[3][-1:-(len(list[3])+1):-1])
+
+3.	Write  a program to get the sum and multiply of all the items in a given list.
+
+% sum=0
+% ans=1
+% list = [1,2,3,4,5]
+% for i in list:
+%     sum += i
+% for j in list:
+%     ans = ans * j
+% print ("The sum of all list value = ", sum)
+% print ("The multiplication of all list value =", ans
+
+4.	Find the largest and smallest number from a given list.
+% # For smallest number by using "min" keyword
+% list = [1,2,0.5,0,-0.5,4,5,]
+% print("This is the smallest number ", min(list), "of the list = ", list)
+% For largest number by using "max" keyword
+% print("This is the largest number ", max(list), "of the list = ", list)
+%
+% # By using for loop keyword
+% list1 = []
+% n = int(input("Enter number of elements in list: "))
+% for i in range(1, n+1):
+%     ele= int(input("Enter your elements: "))
+%     list1.append(ele)
+% m = list1[0]
+% for i in range(n):
+%     if list1[i] < m: 
+%       m = list1[i]
+%     else:
+%       pass
+% print("This is the smallest number ", m, "of the list = ", list1)
+
+5. Create a new list which contains the specified numbers after removing the even numbers from a predefined list.
+% que5 = [0,1,2,3,46,32,466,33,33]
+% qa5 =[]
+% for i in range(len(que5)):
+%     if que5[i]%2!=0:
+%         qa5.append(que5[i])
+% print(qa5)
+
+6. Create a list of elements such that it contains  the squares of  the first and last 5 elements between 1 and30 (both included).
+% q6 =[]
+% for i in range(1,31):
+%     q6.append(i)
+% print(q6)
+% ans = q6[:5]+q6[25:30]
+% print(ans)
+
+7. Write a program to replace the last element in a list with another list.
+    Sample input: [1,3,5,7,9,10], [2,4,6,8] 
+    Expected output: [1,3,5,7,9,2,4,6,8]
+% q7_1_list = [1,3,5,7,9,10]
+% q7_2_list = [2,4,6,8]
+% ans = q7_1_list[:(len(q7_1_list)-1)] + q7_2_list
+% print(ans)
+
+8. Create a new dictionary by concatenating the following two dictionaries:
+    Sample input: a={1:10,2:20} b={3:30,4:40} 
+    Expected output: {1:10,2:20,3:30,4:40}
+# a = {1:10,2:20} 
+# b = {3:30,4:40}
+# a.update(b)
+# print(a)
+
+9. Create a dictionary that contain numbers in the form(x:x*x) where x takes all the values between 1 and n(both 1 and n included).
+    Sample input: n=5
+    Expected output: {1:1, 2:4, 3:9, 4:16, 5:25} 
+    n = int(input("Enter the number contain looing : "))
+% ans = dict()
+% for i in range(1,n+1):
+%     ans[i] = i*i
+% print(ans)
+
+10. Write a program which accepts a sequence of comma-separated numbers from console and generates a list and a tuple which contains every number in the form of string.
+    Sample input: 34,67,55,33,12,98
+    Expected output: [‘34’,’67’,’55’,’33’,’12’,’98’] (‘34’,’67’,’55’,’33’,’12’,’98’)
+% a=34,67,55,33,12,98
+% #print(type(a))
+% l=list(a)
+% for i in range(len(l)):
+%     l[i]=str(l[i])
+% print(l, tuple(l))
