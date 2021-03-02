@@ -50,10 +50,39 @@ x = q5.upper()
 print(x)
 
 6. Define a function that can receive two integral numbers in string form and compute their sum and print it in the console.
+def sum(a,b):
+    x=int(a)
+    y=int(b)
+    return (x+y)
+print(sum("5","10"))
 
 7. Define a function that can accept two strings as input and print the string with the maximum length in the console. If two strings have the same length, then the function should print both the strings line by line.
 
+def find_max_len_string(str1,str2):
+    if len(str1)==len(str2):
+        print(str1)
+        print(str2)
+    elif len(str1)>len(str2):
+        print(str1)
+    else:
+        print(str2)
+
+x = input("Enter your string :")
+y = input("Enter your string :")
+
+find_max_len_string(x,y)
+
 8. Define a function which can generate and print a tuple where the values are square of numbers between 1 and 20 (both 1 and 20 included).
+def t_square_number(start,end):
+    l=[]
+    for i in range(start,end+1):
+        ans = i*i
+        l.append(ans)
+    t=tuple(l)
+    print(t)
+
+(x,y)=(int(input("Enter start number :")),int(input("Enter end number :")))
+t_square_number(x,y)
 
 9. Write a function called showNumbers that takes a parameter called limit. It should print all the numbers between 0 and limit with a label to identify the even and odd numbers. 
 Sample input: show Numbers(3) (where limit=3) 
@@ -63,10 +92,33 @@ Expected output:
 2 EVEN 
 3 ODD
 
+def showNumbers(x):
+    for i in range(x+1):
+        if i%2==0:
+            print(i, "EVEN")
+        elif i%2!=0:
+            print(i, "ODD")
+q9 = int(input("Enter your limit for even-odd number :"))
+showNumbers(q9)
+
 10. Write a program which uses filter() to make a list whose elements are even numbers between 1 and 20 (both included)
+
+l = []
+for i in range(1,21):
+    l.append(i)
+q10 = filter(lambda x:x%2==0, l)
+print(list(q10))
 
 11. Write a program which uses map() and filter() to make a list whose elements are squares of even numbers in [1,2,3,4,5,6,7,8,9,10].
 Hints: Use filter() to filter even elements of the given listUse map() to generate a list of squares of the numbers in the filtered  list. Use lambda() to define anonymous functions.
+
+l = []
+for i in range(1,11):
+    l.append(i)
+q11 = filter(lambda x:x%2==0, l)
+num=list(q11)
+ans=map(lambda x:x*x, num)
+print(list(ans))
 
 12. Write a function to compute 5/0 and use try/except to catch the exceptions
 
