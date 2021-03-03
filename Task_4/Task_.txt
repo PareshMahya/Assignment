@@ -126,7 +126,22 @@ print(list(ans))
 
 14.	Write a program in Python to find the values which are not divisible by 3 but are a multiple of 7. Make sure to use only higher order functions. 
 
+user_range_start_value = int(input("Enter your value of staring range :" ))
+user_range_end_value = int(input("Enter your value of end range:" ))
+user_range_end_value +=1
+#print(list(range(user_range_start_value,user_range_end_value)))
+x= filter(lambda i: i%3!=0 and i%7==0, range(user_range_start_value,user_range_end_value))
+print(list(x))
+
 15. Write a program in Python to  multiply the elements of a list by itself using a traditional function and pass the function to map() to complete the operation.
+
+def mul__By_self_list_element (l):
+    ans = l*l
+    return ans
+user_list=[1,2,3,4,5,6,6,8,9,7,0]
+x=map(mul__By_self_list_element, user_list)
+print(type(x))
+print(list(x))
 
 16. What is the output of the following codes:
 (i) def foo():
