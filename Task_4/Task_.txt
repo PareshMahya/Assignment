@@ -122,7 +122,19 @@ print(list(ans))
 
 12. Write a function to compute 5/0 and use try/except to catch the exceptions
 
+a = 5
+b = 0
+try:
+    ans = a/b
+    print(ans)
+except Exception as pm:
+    print("There is ",pm, "error")
+
 13.	Flatten the list  [1,2,3,4,5,6,7]  into 1234567  using reduce().
+
+from functools import reduce
+ans = reduce(lambda s,i: s+str(i),[1,2,3,4,5,6,7],'')
+print(ans)
 
 14.	Write a program in Python to find the values which are not divisible by 3 but are a multiple of 7. Make sure to use only higher order functions. 
 
@@ -144,27 +156,42 @@ print(type(x))
 print(list(x))
 
 16. What is the output of the following codes:
-(i) def foo():
+
+# ---------- (i) --------- 
+# def foo():
+#         try:
+#             print("hi")
+#             return 1    
+#         finally:
+#             print("hi")
+#             return 2 
+#         k = foo()
+#         print(k)
+
+# In the above program Indentation Error.
+def foo():
         try:
+            print("hi")
             return 1    
-        finally:   
-            return 2 
-    k = foo() 
-    print(k)
-
-(ii) def a():
-        try:
-            f(x, 4)    
         finally:
-            print('after f')
-            print('after f?')
-    a()
+            print("hi")
+            return 2 
+k = foo()
+print(k)
+# If we fixed Indentation Error then it will run both block, try block will save value "1" but finally block will overwrite the value by "2". 
+# And we get only "2" out put. 
+#
+# --------- (ii) ---------- 
+def a():
+    try:
+        f(x, 4)
+    finally:
+        print('after f')
+        print('after f?')
+a()
 
-
-
-
-
-
-
-
-
+# Here program is not going to execute, because of  Indentation error of a(). 
+# If we fixed it, still we have 
+# NameError: name 'f' is not defined 
+# And i don't know what is x, and f so i can not fix this error 
+# Here only problem in Try block, finally block will work
