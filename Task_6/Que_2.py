@@ -5,3 +5,7 @@
 #   Sample input: students = ['Smit', 'Jaya', 'Rayyan'] subjects = ['CSE', 'Networking', 'Operating System']
 #   Expected output: {‘Smit’ : ’CSE’ , ’Jaya’ : ’Networking’ , ’Rayyan’ : ’Operating System’}
 #
+students = ['Smit', 'Jaya', 'Rayyan'] 
+subjects = ['CSE', 'Networking', 'Operating System']
+ans = zip(students,subjects)
+print(dict(ans))
