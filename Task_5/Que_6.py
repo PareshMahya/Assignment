@@ -5,3 +5,11 @@
 #       Which is of even length 
 #       Make sure you return the content in The same link as it is present.
 #
+
+file = open("/Users/pareshmahyavanshi/Desktop/git/Assignment/Task_5/doc.txt","r")
+f = file.readline()
+for f in file:
+    if len(f)%2==0:
+        print(f)
+    else:
+        pass
