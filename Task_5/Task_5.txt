@@ -9,7 +9,23 @@ except SyntaxError:
     
 #2.	Write a program in Python to allow the user to open a file by using the argv module. If the entered name is incorrect throw an exception and ask them to enter the name again. Make sure to use read only mode. 
 
+import sys
+try:
+    if sys.argv[1]=="test.txt":
+        with open("test.txt")as f:
+            f.read()
+except FileNotFoundError:
+        print("Entered file name is invalid, Please, enter the name again :")
+
 #3.	Write a program to handle an error if the user entered a number more than four digits it should return “The length is too short/long !!! Please provide only four digits”  
+
+try:
+    usr_ip = int(input("Enter four digits number :"))
+    ip = str(usr_ip)
+    if len(ip)!=4:
+        raise ValueError ("Worng Number of Digit")
+except ValueError:
+     print("The length is too short/long !!!")
 
 #4.	Create a login page backend to ask users to enter the username and password. Make sure to ask for a Re-Type Password and if the password is incorrect give chance to enter it again but it should not be more than 3 times. 
 

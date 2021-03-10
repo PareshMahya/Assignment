@@ -3,8 +3,9 @@
 #
 
 try:
-    usr_ip = input("Enter four digits number :")
-    while len(usr_ip)==4:
-        print("Perfect")
-except:
-    print("hello")
+    usr_ip = int(input("Enter four digits number :"))
+    ip = str(usr_ip)
+    if len(ip)!=4:
+        raise ValueError ("Worng Number of Digit")
+except ValueError:
+     print("The length is too short/long !!!")

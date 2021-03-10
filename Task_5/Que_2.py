@@ -4,21 +4,10 @@
 #       Make sure to use read only mode.
 #
 
-# while True:
-#     # try:
-#         usr_ip = input("Enter the file name of Que_1.py :")
-#         if usr_ip !="Que_1.py":
-#             raise input("Enter the file name of Que_1.py :")
-#             # with open("Que_1.py") as f:
-#             #     f.read()
-#             #     f.close()
-#             #     break
-#     # except(FileNotFoundError):
-#     #     print("Sorry, Incorrect file name")
-#     #     usr_ip = input("Please, enter the file name of Que_1.py :")
-
+import sys
 try:
-    usr_ip = input("Enter the file name of Que_1.py :")
-    f = open(, "r")
+    if sys.argv[1]=="test.txt":
+        with open("test.txt")as f:
+            f.read()
 except FileNotFoundError:
-    print("The file doesn't exist")
+        print("Entered file name is invalid, Please, enter the name again :")
