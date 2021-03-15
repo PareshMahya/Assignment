@@ -1,8 +1,15 @@
 <html>
 <body>
-{{ tag_var }}
+{{tag_var}}
+
+<h1 style="background:white; border:5px solid black; color:blue; font-family:arial; font-size:70px; text-align:center;">
+    Testing of Static file
+</h1>
+<h2 style="background:yellow; color: red;font-family:arial; font-size:40px; text-align:left;">
+    This Testing of Static file concept to display jpg file on the web page and to changed font or
+color of the text.
+</h2>
 {% load static %}
-<h1>Testing of Static file concept to display jpg file on the web page.</h1>
-<link rel="stylesheet" type="text/css" href="{% static 'first.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'img.css' %}"/>
 </body>
 </html>

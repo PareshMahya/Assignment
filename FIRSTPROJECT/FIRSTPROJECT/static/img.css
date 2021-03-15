@@ -1,0 +1,8 @@
+body{
+    background-image:url("images/pm1.jpg");
+    background-repeat:no-repeat;
+    background-size:auto;
+    background-position:50% 80% ;
+    background-color:green;
+    background-attachment:fixed;
+}
