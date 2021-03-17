@@ -19,9 +19,48 @@ print(ans_list)
 
 2.	Define a class named Shape and its subclass Square. The Square class has an init function whichtakes length as argument. Both classes have an area function which can print the area of the shape where Shape’s area is 0 by default. 
 
+class Shape():
+    def __init__(self):
+        pass
+
+    def area(self):
+        return 0
+
+class Square(Shape):
+    def __init__(self, length=0):
+        self.length = length
+        Shape.__init__(self)
+        
+
+    def area(self):
+        return self.length*self.length
+
+ans = Square(10)
+print(ans.area())
+print(Square().area())
+
 3.	Create a class to find three elements that sum to zero from a set of n real numbers
 Input array: [-25,-10,-7,-3,2,4,8,10]
 Expected output: [[-10,2,8],[-7,-3,10]]
+
+def find_3_number(nums):
+    num = sorted(nums)
+    l = len(num)
+    ans = []
+    three_num_set = False
+    for i in range(0, l-2):
+        for j in range(i+1, l-1):
+            for k in range(j+1, l):
+                if (num[i] + num[j] + num[k] == 0):
+                    ans.append([num[1],num[j],num[k]])
+                    three_num_set = True
+    print(ans)
+    if (three_num_set == False):
+        print("There is no set of three-element, whose sum equal to zero.")
+ 
+
+num = [-25, -10, -7, -3, 2, 4, 8, 10]
+find_3_number(num)
 
 4.	Create a Time class and initialize it with hours and minutes.
 Create a method addTime which should take two Time objects and add them. 
