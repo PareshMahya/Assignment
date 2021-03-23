@@ -12,4 +12,4 @@ The CatenationPython_Paresh is the repository of submitting assignments. And thi
 ### Task-5 -- Completed
 ### Task-6 -- Completed
 ### FirstProject -- Completed
-### Task-7 -- Start working.. 
+### Task-7 -- Completed 

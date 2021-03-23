@@ -10,7 +10,7 @@ class Time():
 		self.hours = hours
 		self.mins = mins
 
-	def addTime(self,t1,t2):
+	def addTime(t1,t2):
 		hr=t1.hours+t2.hours
 		mn =t1.mins+t2.mins
 		temp=(hr*60)+mn
@@ -25,10 +25,11 @@ class Time():
 		print("Time is", self.hours,"hours and", self.mins, "minutes.")
 
 	def displayMinute(self):
-		print (self.hours*60)+self.mins
+		print ("The total time in minutes is :", (self.hours*60) + self.mins)
+
 a = Time(2,50)
 b = Time(1,20)
-ans=addTime(Time(2,50),Time(1,20))
-ans.displayTime()
-ans.displayMinute()
+c = Time.addTime(a,b)
+c.displayTime()
+c.displayMinute()
 
